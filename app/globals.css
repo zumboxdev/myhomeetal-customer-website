@@ -1,0 +1,375 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply font-clash;
+}
+
+input {
+  font-size: 16px; /* Prevent zoom on iPhone */
+  box-sizing: border-box;
+}
+
+a:not(.btn):hover {
+  /* text-decoration: underline; */
+}
+
+.phone-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+}
+
+.phone-input-updated {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: none;
+  background-color: #F4F4F4;
+  border-radius: 16px;
+}
+
+.phone-input-updated input {
+  background-color: #F4F4F4;
+}
+
+.phone-input-updated input::placeholder {
+  color: #5E5E5E;
+  font-size: 12px;
+}
+
+.phone-input2 {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background: white;
+  border-radius: 16px;
+}
+
+.phone-input-mobile  {
+  width: 100%;
+  padding: 5px;
+  font-size: 12px;
+  background:#f4f4f4;
+  border-radius: 10px;
+}
+
+.phone-input-mobile  .PhoneInputCountry{
+ padding: 0px 10px;
+}
+.phone-input2-mobile {
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+  background: white;
+  border-radius: 10px;
+}
+
+.phone-input input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+}
+.phone-input2 input {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  background: white;
+}
+
+.bodyText {
+  @apply leading-[19.68px] text-base lg:text-xl lg:leading-[24.6px];
+}
+
+.phone-input-mobile input {
+  background:#f4f4f4;
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+  border: none;
+}
+.phone-input2-mobile input {
+  background: white;
+  width: 100%;
+  padding: 12px;
+  font-size: 12px;
+  border: none;
+}
+
+.phone-input input:focus {
+  border: none;
+  outline: none;
+}
+.phone-input2 input:focus {
+  border: none;
+  outline: none;
+}
+
+.phone-input-mobile input:focus {
+  border: none;
+  outline: none;
+}
+.phone-input2-mobile input:focus {
+  border: none;
+  outline: none;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 30px;
+}
+
+.spinner {
+  border: 1px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 1px solid #ED2224;
+  border-right: 1px solid #ED2224;
+  width: 18px;
+  height: 18px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.checkmark {
+  color: #4caf50;
+  font-size: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.date-picker-container {
+  position: relative;
+  display: inline-block;
+}
+
+.open-modal-btn {
+  background-color: #f00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.date-picker-calendar {
+  margin-bottom: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-btn,
+.save-btn {
+  background-color: #f00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: #1B691B;
+}
+
+
+/* Hide the default checkbox */
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border: 0.77px solid #000; /* Default border */
+  border-radius: 50%; /* Fully rounded */
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+/* Checkbox when checked */
+input[type='checkbox']:checked {
+  background-color: #ff0003;
+  border: none;
+}
+
+/* Checkbox when unchecked */
+input[type='checkbox']:not(:checked) {
+  background-color: #fff;
+}
+
+/* Add checkmark */
+input[type='checkbox']:checked::after {
+  content: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="white" class="bi bi-check" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 0-.708-.708l-7.5 7.5-3.5-3.5a.5.5 0 1 0-.708.708l4 4a.5.5 0 0 0 .708 0l8-8z"/></svg>');
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .three-line-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    /* Adjust the number of lines */
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Custom Scrollbar for the dropdown */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f4f4f4;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 10px;
+  border: 2px solid #f4f4f4;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #a8a8a8;
+}
+
+.is-pinned {
+  height: auto;
+  box-shadow:
+    0 1px 3px 0 rgb(0 0 0 / 0.1),
+    0 1px 2px -1px rgb(0 0 0 / 0.1);
+  opacity: 1;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.shimmer-animation {
+  position: relative;
+  overflow: hidden;
+  background-color: #f6f6f6;
+}
+
+.shimmer-animation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 2s infinite;
+}
+
+/* Custom CSS for SearchBox */
+.ais-SearchBox-input {
+  padding: 10px 16px;
+  border: 1px solid #BDBDBD;
+  border-radius: 100px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.ais-SearchBox-submit {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-search {
+  position: relative;
+  min-width: 288px;
+  width: 100%;
+}
+
+.myFlex {
+  @apply flex items-center justify-center;
+}
+
+
+@media (max-width: 768px) {
+  /* For mobile screens */
+  .icon-mobile {
+    color: white;
+    /* Example mobile color */
+  }
+
+  .phone-input-updated {
+    padding: 10px 10px;
+    border-radius: 16px;
+  }
+}

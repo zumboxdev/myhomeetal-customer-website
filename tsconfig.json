@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "types": [
+      "node"
+    ],
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@components/*": [
+        "./app/components/*"
+      ],
+      "@utils/*": [
+        "./app/utils/*"
+      ],
+      "@services/*": [
+        "./app/services/*"
+      ]
+    },
+    "strictNullChecks": false
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/(main)/(overview)/page.tsx",
+    "app/components/DesktopNav2.tsx"
+, "next-sitemap.config.js"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
