@@ -244,9 +244,12 @@ const MainFooter: React.FC = () => {
               <Link href='/termsOfUse' className='text-xs hover:text-primary'>
                 Term Of Use
               </Link>
-              <p className='text-xs hover:text-primary'>
+              <Link href='/refundPolicy' className='text-xs hover:text-primary'>
+                Refund Policy
+              </Link>
+              {/* <p className='text-xs hover:text-primary'>
                 Cookie Settings
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
