@@ -32,7 +32,7 @@ export default function CatContainer() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch(`https://api.myhomeetal.store/api/v1/product-category/categories`);
+        const response = await fetch(`https://api.myhomeetal.com/api/v1/product-category/categories`);
         if (!response.ok) throw new Error('Failed to fetch categories');
         const data: ApiCategory[] = await response.json();
 

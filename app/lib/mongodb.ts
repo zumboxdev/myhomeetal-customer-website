@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 // MongoDB connection string
-const mongoURI: string = process.env.MongoURL ?? "";
+const mongoURI: string = process.env.MONGO_URL ?? "";
 
 // Function to connect to MongoDB
 const connectToMongoDB = async (): Promise<void> => {
